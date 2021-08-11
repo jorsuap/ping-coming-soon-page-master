@@ -25,10 +25,12 @@ body {
     text-align: center;
     margin-bottom: 20px;
 }
-.information__tittle{
+
+.information__tittle {
     font-size: 2em;
     margin-bottom: 5px;
 }
+
 .light {
     font-weight: 300;
     color: hsl(0, 0%, 59%);
@@ -38,27 +40,38 @@ body {
     margin-top: 0;
     font-weight: 300;
 }
-.form{
+
+.form {
     margin-bottom: 40px;
+    margin-right: 160px;
 }
 
-.email{
-    width: 300px;
+form {
+    position: relative;
+}
+
+.email {
+    width: 330px;
     padding: 15px 30px;
     border-radius: 30px;
     border: solid 1px hsl(223, 100%, 88%);
     color: hsl(223, 100%, 88%);
 }
-::-ms-input-placeholder{
+
+::-ms-input-placeholder {
     color: hsl(223, 100%, 88%);
 }
-::-moz-placeholder{
+
+::-moz-placeholder {
     color: hsl(223, 100%, 88%);
 }
+
 ::-webkit-input-placeholder {
     color: hsl(223, 100%, 88%);
 }
-.button{
+
+.button {
+    position: absolute;
     border: none;
     background-color: hsl(223, 87%, 63%);
     color: hsl(0, 0%, 100%);
@@ -67,6 +80,9 @@ body {
     margin-left: 10px;
     box-shadow: 0px 5px 10px 0px hsla(210, 32%, 12%, 0.308);
     cursor: pointer;
+    right: -170px;
+    top: 0;
+    z-index: 9;
 }
 
 .dashboar {
@@ -75,50 +91,58 @@ body {
 }
 
 #dashboar__img {
-    width: 55%;
+    width: 45%;
 }
-.autor__copy{
+
+.autor__copy {
     margin-top: 20px;
     margin-bottom: 0;
     font-size: 0.6em;
 }
-.icons__img{
-    margin-top: 40px;
+
+.icons__img {
+    margin-top: 30px;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-#facebook{
+#facebook {
     background-color: rgb(79, 125, 243);
     border-radius: 50%;
     padding: 1px;
     margin: 10px;
 }
-#facebook:hover{
+
+#facebook:hover {
     background-color: hsl(0, 0%, 100%);
     fill: rgb(79, 125, 243);
     cursor: pointer;
 }
-#twiter{
+
+#twiter {
     border-radius: 50%;
     padding: 3px;
     border: solid 1px rgb(79, 125, 243);
     margin: 10px;
 }
-#twiter:hover{
+
+#twiter:hover {
     background-color: rgb(79, 125, 243);
     fill: hsl(0, 0%, 100%);
     border: solid 1px white;
     cursor: pointer;
 }
-.icon-instagram:hover{
+
+.icon-instagram:hover {
     color: white;
     fill: rgb(79, 125, 243);
 }
-#instagram{
+
+#instagram {
     color: white;
 }
+
 .attribution {
     font-size: 11px;
     text-align: center;
@@ -131,18 +155,85 @@ body {
 
 /*CSS para error de validacion*/
 
-.error{
+.error {
     border: solid 1px hsl(354, 100%, 66%);
 }
-.idmsnerror{
-    visibility: hidden;
+
+.idmsnerror {
+    display: none;
     color: hsl(354, 100%, 66%);
     font-size: .7em;
 }
-.idmsnerror p{
-    margin-left: 30px;
+
+.idmsnerror p {
+    margin-left: 30px; 
     margin-top: 5px;
+ 
 }
-.active{
-    visibility: visible;
+
+.active {
+    display: block;
+}
+
+/*MediasQuery*/
+
+@media(max-width:1024px) {
+    #dashboar__img {
+        width: 60%;
+    }
+}
+
+@media(max-width:800px) {
+    #dashboar__img {
+        width: 70%;
+    }
+}
+
+@media(max-width:650px) {
+    #dashboar__img {
+        width: 80%;
+    }
+    .form{
+        margin-right: 0;
+     
+    }
+    form {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+    }
+    .button {
+        width: 100%;
+        margin-top: 10px;
+        position: relative;
+        right: 0;
+    }
+    
+    .email {
+        width: 300px;
+    }
+    .idmsnerror p {
+        text-align: center;
+        margin-left: 0px; 
+    }
+
+}
+@media(max-width:550px) {
+    
+    .email {
+        width: 250px;
+    }
+    .information__tittle {
+        font-size: 1.3em;
+        margin-top: 30px;
+    }
+    .information__estract {
+        font-size: .8em;
+        margin-top: 10px;
+        font-weight: 300;
+    }
+    
+
 }
